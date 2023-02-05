@@ -1235,6 +1235,8 @@ p {
   .container {
     width: 428px;
     display: block;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   body {
@@ -1242,7 +1244,6 @@ p {
   }
 
   .content-customers {
-    width: 428px;
     flex-wrap: wrap;
     column-gap: 16px;
   }
