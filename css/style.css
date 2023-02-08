@@ -1194,17 +1194,21 @@ p {
 
 /* media */
 
-.hero {
-  font-size: 36px;
-  line-height: 1.1;
-}
-
 @media screen and (max-width: 480px) {
   .adaptive {
-    width: 428px;
+    max-width: 480px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .team-content {
+    min-width: 480px
+  }
+
+  .hero {
+    font-size: 36px;
+    line-height: 1.1;
   }
 
   .menu-button {
@@ -1221,7 +1225,7 @@ p {
   }
 
   .adaptive-team {
-    width: 264px;
+    max-width: 264px;
     margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto !important;
@@ -1230,17 +1234,33 @@ p {
   .section {
     padding-top: 96px;
     padding-bottom: 96px;
+    max-width: 480px;
+  }
+
+  .title {
+    min-width: 480px;
   }
 
   .container {
-    width: 428px;
+    max-width: 480px;
     display: block;
     padding-left: 16px;
     padding-right: 16px;
   }
 
   body {
-    width: 428px;
+    max-width: 480px;
+    overflow-x: hidden;
+  }
+
+  html {
+    min-width: 320px;
+    max-width: 480px;
+    /* overflow-x: hidden; */
+  }
+
+  .overlay {
+    min-width: 480px;
   }
 
   .content-customers {
@@ -1288,6 +1308,7 @@ p {
   footer {
     padding-top: 96px;
     padding-bottom: 96px;
+    min-width: 480px
   }
 
   .adaptive-footer {
@@ -1320,19 +1341,47 @@ p {
   }
 }
 
-/* Tablet */
-/* .hero {
-  font-size: 56px;
-  line-height: 1.1;
-} */
+
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   body {
-    width: 768px;
+    max-width: 768px;
+    overflow-x: hidden;
+    min-width: 481px;
+  }
+
+  html {
+    max-width: 768px;
+    min-width: 481px;
+    /* overflow-x: auto; */
+  }
+
+  .team-content {
+    min-width: 768px;
+  }
+
+  .current::after {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    bottom: -200%;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    content: "";
+    border-radius: 2px;
   }
 
   .container {
-    width: 768px;
+    max-width: 768px;
+    min-width: 481px;
+  }
+
+  .contact {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
   }
 
   .overlay {
@@ -1419,6 +1468,8 @@ p {
     padding-bottom: 96px;
     padding-top: 96px;
     padding-left: 108px;
+    min-width: 768px;
+    overflow-x: hidden;
   }
 
   .address {
@@ -1442,9 +1493,14 @@ p {
 
   .content-footer {
     padding: 0;
+    max-width: 768px;
   }
 
   .menu-button {
     display: none;
+  }
+
+  .title {
+    min-width: 768px;
   }
 }
