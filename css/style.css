@@ -1194,7 +1194,7 @@ p {
 
 /* media */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .adaptive {
     max-width: 480px;
     display: block;
@@ -1242,8 +1242,7 @@ p {
   }
 
   .container {
-    max-width: 480px;
-    display: block;
+    max-width: 100%;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -1257,6 +1256,8 @@ p {
     min-width: 320px;
     max-width: 480px;
     /* overflow-x: hidden; */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .overlay {
@@ -1343,7 +1344,7 @@ p {
 
 
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   body {
     max-width: 768px;
     overflow-x: hidden;
@@ -1354,6 +1355,8 @@ p {
     max-width: 768px;
     min-width: 481px;
     /* overflow-x: auto; */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .team-content {
